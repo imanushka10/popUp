@@ -30,23 +30,9 @@ function closeModal() {
     modalWrapper.classList.remove('active');
 }
 
-function copyTokenOne() {
-    var copyPassText = document.getElementById("tokenOne")
+
+function copy(event) {
+    const copyPassText = event.target.parentNode.getElementsByTagName('input')[0];
     copyPassText.select()
-    document.execCommand("Copy")
-}
-function copyTokenTwo() {
-    var copyPassText = document.getElementById("tokenTwo")
-    copyPassText.select()
-    document.execCommand("Copy")
-}
-function copyTokenThree() {
-    var copyPassText = document.getElementById("tokenThree")
-    copyPassText.select()
-    document.execCommand("Copy")
-}
-function copyTokenFourth() {
-    var copyPassText = document.getElementById("tokenFour")
-    copyPassText.select()
-    document.execCommand("Copy")
+    document.execCommand("copy")
 }
